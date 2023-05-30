@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/', [PageController::class, 'index']);
+
+Route::resource('admin/games', GameController::class);
