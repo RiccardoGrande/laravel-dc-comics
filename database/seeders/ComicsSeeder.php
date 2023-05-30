@@ -13,10 +13,10 @@ class ComicsSeeder extends Seeder
      */
     public function run()
     {
-        $games = config('db.comics'); // < -- crea prima i dati nel file config/db.php
+        $comics = config('db.comics'); // < -- crea prima i dati nel file config/db.php
 
         foreach ($comics as $comic) {
-            $newComic = new Comic();
+            $newComic = new ComicsSeeder();
             $newComic->title = $comic['title'];
             $newComic->description = $comic['description'];
             $newComic->thumb = $comic['thumb'];
