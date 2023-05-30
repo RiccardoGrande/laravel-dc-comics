@@ -21,8 +21,6 @@ return new class extends Migration
             $table->float('price', unsigned:true)->nullable();
             $table->string('type')->default('comic book');
             $table->string('series');
-            $table->string('artists')->default(false);
-            $table->string('writers')->default(false);
             $table->date('sales_date')->nullable();
             $table->timestamps();
         });
