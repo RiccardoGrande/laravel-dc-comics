@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\comics;
+use App\Model\Comic;
 use Illuminate\Database\Seeder;
 
 class ComicsSeeder extends Seeder
@@ -17,7 +17,7 @@ class ComicsSeeder extends Seeder
         $comics = config('db.comics'); // < -- crea prima i dati nel file config/db.php
 
         foreach ($comics as $comic) {
-            $newComic = new comics();
+            $newComic = new Comic();
             $newComic->title = $comic['title'];
             $newComic->description = $comic['description'];
             $newComic->thumb = $comic['thumb'];
