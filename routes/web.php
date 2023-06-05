@@ -1,5 +1,7 @@
 <?php
 
+use Controllers\Admin\ComicsController;
+use Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,4 +21,4 @@ Route::get('/', function () {
 
 Route::get('/', [PageController::class, 'index']);
 
-Route::resource('admin/comics', GameController::class);
+Route::resource('admin/comics', ComicsController::class);
